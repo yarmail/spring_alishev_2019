@@ -8,9 +8,11 @@ https://www.youtube.com/watch?v=5ePo08sqcpk&list=PLAma_mKffTOR5o0WNHnY0mTjKxnCgS
 
 #### Обзор
 
-Урок 1: Введение. Зачем изучать Spring?<br>
-[lesson01](/src/main/java/lesson01)<br>
-![typicalAppJava](/src/main/java/lesson01/typicalAppJava.png)<br>
+
+<a href="/src/main/java/lesson01">Урок 1: Введение. Зачем изучать Spring</a><br>
+
+<img src="/src/main/java/lesson01/typicalAppJava.png" width="200"><br>
+
 
 Урок 2
 
