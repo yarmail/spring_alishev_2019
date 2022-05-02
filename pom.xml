@@ -15,6 +15,37 @@
     </properties>
 
     <dependencies>
+        <!--
+        Добавлено в уроке 2 для простейшего приложения
+        Базовая зависимость Spring
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.1.4.RELEASE</version>
+        </dependency>
 
+        <!--
+        Добавлено в уроке 2 для простейшего приложения
+        Базовая зависимость Spring для создания объектов(бинов)
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>5.1.14.RELEASE</version>
+        </dependency>
+
+        <!--
+        Добавлено в уроке 2 для простейшего приложения
+        Базовая зависимость Spring
+        Интересно, что все 3 зависимости  2 урока
+        относятся к springframework
+        Возможно в дальнейшем их можно будет загружать группой
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.1.4.RELEASE</version>
+        </dependency>
     </dependencies>
 </project>

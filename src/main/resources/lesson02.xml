@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+В этом месте мы создаем (скорее наверное описываем)
+новый бин, как я понимаю из существующего класса через xml
+
+id="testBean" - задаем уникальный идентификатор для нашего класса
+
+class="lesson02.TestBean" - задаем путь от корневой source папки java
+
+Так как наш TestBean.java требует в конструкторе заполнения
+поля name добавляем и заполняем параметр
+constructor-arg value="Nail"
+
+-->
+        <bean id="testBean" class="lesson02.TestBean">
+            <constructor-arg value="У нас получилось создать бин"/>
+        </bean>
+</beans>
