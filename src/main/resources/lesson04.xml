@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="musicBean" class="lesson04.ClassicalMusic">
+        </bean>
+</beans>
+
+<!--
+В конфигурационном файле мы описываем, из чего создавать бины
+<bean id="musicBean" class="lesson04.ClassicalMusic">
+
+Нельзя создать бин из интерфейса Music,
+только из конкретного класса
+
+Достаточно только здесь поменять ClassicalMusic на RockMusic
+и весь код будет работать с новым классом
+Хороший эффект вероятно дотигается, когда классов сотни и тысячи
+
+-->

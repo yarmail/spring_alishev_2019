@@ -8,6 +8,7 @@ public class TestSpring {
                 new ClassPathXmlApplicationContext("lesson02.xml");
         TestBean testBean = context.getBean("testBean", TestBean.class);
         System.out.println(testBean.getMessage());
+        context.close();
     }
 }
 /*

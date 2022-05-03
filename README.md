@@ -20,12 +20,21 @@
 
 #### Обзор
 <!--- Урок 1 -->
-<a href="/src/main/java/lesson01">Урок 1: Введение. Зачем изучать Spring</a><br>
+<a href="/src/main/java/lesson01">
+Урок 1: Введение. Зачем изучать Spring</a><br>
 <img src="/src/main/java/lesson01/typicalAppJava.png" width="200"><br>
 
 <!--- Урок 2 -->
-<a href="/src/main/java/lesson01">Урок 2: Первое приложение (IntelliJ Idea)</a><br>
+<a href="/src/main/java/lesson02">
+Урок 2: Первое приложение (IntelliJ Idea)</a><br>
 <img src="/src/main/java/lesson02/dependency.png" width="200"><br>
+
+<!--- Урок 3 -->
+Урок 3: Первое приложение (Eclipse)<br>
+
+<!--- Урок 4 -->
+<a href="/src/main/java/lesson04">
+Урок 4: Инверсия управления. Inversion of Control (IoC).</a><br>
 
 
 
