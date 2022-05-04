@@ -35,6 +35,9 @@
 <!--- Урок 4 -->
 <a href="/src/main/java/lesson04">
 Урок 4: Инверсия управления. Inversion of Control (IoC).</a><br>
+<img src="/src/main/java/lesson04/IoC.png" width="200"><br>
 
-
-
+<!--- Урок 5 -->
+<a href="/src/main/java/lesson05">
+Урок 5: Внедрение зависимостей. Dependency Injection (DI). Введение.</a><br>
+<img src="/src/main/java/lesson05/diBean.png" width="200"><br>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="musicBean" class="lesson05.ClassicalMusic">
+        </bean>
+        <bean id="musicPlayer" class="lesson05.MusicPlayer">
+                <constructor-arg ref="musicBean"/>
+        </bean>
+</beans>
+
+<!--
+Добавляем новый бин (id="musicPlayer")
+(чтобы не создавать его вручную в TestSpring?)
+
+У класса MusicPlayer есть конструктор,
+поэтому и при описании бина нужен конструктор
+constructor-arg ref="musicBean"
+в который мы кладем тот объект (бин),
+который должен быть передан этому бину
+В данном случае мы ссылаемся на musicBean
+который, в свою очередь = ClassicalMusic
+Таким образом бин musicPlayer
+уже будет с внедренной зависимостью
+-->

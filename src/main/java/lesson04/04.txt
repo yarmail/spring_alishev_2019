@@ -95,7 +95,7 @@ public void playMusic() {
 ---- (4 случай)
 class UseMusicPlayer {
     public static void main (String[] ars) {
-        MusicPlayer musicPlaer = new MusicPlayer(new ClassicalMusic());
+        MusicPlayer musicPlayer = new MusicPlayer(new ClassicalMusic());
     }
 }
 Этот воппрос также решает Spring с помощью
