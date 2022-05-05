@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <context:property-placeholder location="classpath:lesson06.properties"/>
+
+        <bean id="musicBean" class="lesson06.ClassicalMusic">
+        </bean>
+        <bean id="musicPlayer" class="lesson06.MusicPlayer">
+                <property name="music" ref="musicBean"/>
+                <property name="name" value="Some name"/>
+                <property name="volume" value="50"/>
+
+        </bean>
+</beans>
+
+<!--
+В данном уроке вместо конструктора
+<constructor-arg ref="musicBean"/>
+
+используем тег property,
+который указывает на сеттер (поле) класса musicPlayer,
+и ссылается ref на
+ref="musicBean"
+на бин, которым мы должны заполнить это поле
+
+......
+
+для показа внедрения простых полей в качестве зависимости
+создали два поля в классе MusicPlayer
+    private String name;
+    private int volume;
+
+В конфиге Спринг видит в классе musicPlayer
+ещё сеттеры с полями и мы можем внедрить туда конкретные значения
+        <property name="name" value="Some name"/>
+        <property name="volume" value="50"/>
+Далее будем доставть их из контекста в классе TestString
+
+....
+
+Также мы можем импортировать значения полей из внешнего
+файла lesson06.properties
+Для этого в шапку добавляется
+xmlns:context="http://www.springframework.org/schema/context"
+а перед бинами добавляется
+<context:property-placeholder location="classpath:lesson06.properties"/>
+т.е. мы подключаем наш файл с настройками через classpath
+и далее пользуемся его значениями и внедряем вместо значений
+из класса вот таким образом (немного другой синтаксис)
+<property name="name" value="${musicPlayer.name}"/>
+<property name="volume" value="${musicPlayer.volume}"/>
+
+
+-->

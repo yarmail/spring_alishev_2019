@@ -41,3 +41,10 @@
 <a href="/src/main/java/lesson05">
 Урок 5: Внедрение зависимостей. Dependency Injection (DI). Введение.</a><br>
 <img src="/src/main/java/lesson05/diBean.png" width="200"><br>
+
+<!--- Урок 6 -->
+<a href="/src/main/java/lesson06">
+Урок 6: Dependency Injection. Часть 2</a><br>
+Зависимость через сеттер <br>
+Внедрение простых значения в качестве зависимости <br>
+Внедрение зависимости из внешнего файла <br>

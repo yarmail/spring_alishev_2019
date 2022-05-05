@@ -1,0 +1,59 @@
+Урок 6: Dependency Injection. Часть 2
+
+На этом уроке мы
+внедрим зависимость через сеттер,
+внедрим простые значения в качестве зависимости
+внедрим зависимости из внешнего файла.
+
+---
+
+Повторим внедрение через конструктор - используем
+конструктор в конф. файле
+
+    <bean id="musicPlayer" class="lesson05.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
+---
+
+На этом уроке  мы используем сеттер
+в классе MusicPlayer и property в конф. файле
+
+---
+
+На прошлых занятиях мы внедряли ссылку на бин, тег
+ref="musicBean"
+на этом уроке мы попробуем внедрить какое-то конкретное
+значение, число или строку
+тег <property>
+Было в нашем классе:
+private String name;
+private int volume;
+и создавались соотвествующие сеттеры
+
+стало в конфиге, с заполнением значений
+<property name = "name" value = "Some name" />
+<property name = "volume" value = "50">
+
+---
+
+Также мы попробуем внедрять значения из внешнего файла
+попробуем создать файл .properties
+в этом файле укажем наши значания, например
+
+musicPlayer.name=Some name
+musicPlayer.volume=60
+
+следующий этап мы этот файл импортируем
+(в конфигурационном файле?)
+<context:property-placeholder location="classpath:musicPlayer.properties/>
+
+и в дальнейшем мы можем использовать значения из этого файла
+<property name = "name" value = "${musicPlayer.name}" />
+<property name = "volume" value = "${musicPlayer.volume}">
+
+
+
+
+
+
