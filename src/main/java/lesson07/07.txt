@@ -13,7 +13,7 @@ Scope Singleton чаще всего используется тогда, ког�
 этот scope можно указать явно
 <bean
     id="musicBean"
-    class="lesson06.ClassicalMusic">
+    class="ClassicalMusic">
     scope="singleton"> //запись излишня
 </bean>
 
