@@ -1,0 +1,32 @@
+Урок 7: Bean scope (Область видимости бинов)
+
+(scope - объем (объектов?))
+
+Scope Singleton - по умолчанию создается только Один объект
+в конфиге (он создается до вызова метода getBean() в клиенте)
+<bean id="musicBean" class="lesson06.ClassicalMusic"></bean>
+При всех вызовах getBean() возвращается ссылка на один и тот
+же единственный объект
+Scope Singleton чаще всего используется тогда, когда у
+нашего бина нет изменяемых состояний (stateless)
+(типа синглтон для БД)
+этот scope можно указать явно
+<bean
+    id="musicBean"
+    class="lesson06.ClassicalMusic">
+    scope="singleton"> //запись излишня
+</bean>
+
+---
+
+Scope Prototype - кажрый раз создается новый объект
+при вызове getBean() Чаще всего применяется тогда,
+когда у нашего бина есть изменяемые состояния.
+(stateful)
+scope="prototype">
+
+---
+
+singleton, prototype - на этом уроке
+request, session, global-session - в Spring MVC
+
