@@ -9,43 +9,51 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--
+         Ушёл на 11 версию с 17, т.к. в 9 уроке при добавлении
+         сканирования папки на бины получил ошибку
+         org.springframework.core.NestedIOException: ASM ClassReader
+         failed to parse class file - probably due to a new Java class
+         file version that isn't supported yet
+         Возможно 17 версия и спринг 5.1.14 не дружили
+        -->
     </properties>
 
     <dependencies>
-        <!--
-        Добавлено в уроке 2 для простейшего приложения
-        Базовая зависимость Spring
-        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>5.1.4.RELEASE</version>
+            <!--
+            Добавлено в уроке 2 для простейшего приложения
+            Базовая зависимость Spring
+            -->
         </dependency>
 
-        <!--
-        Добавлено в уроке 2 для простейшего приложения
-        Базовая зависимость Spring для создания объектов(бинов)
-        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>5.1.14.RELEASE</version>
+            <!--
+            Добавлено в уроке 2 для простейшего приложения
+            Базовая зависимость Spring для создания объектов(бинов)
+            -->
         </dependency>
 
-        <!--
-        Добавлено в уроке 2 для простейшего приложения
-        Базовая зависимость Spring
-        Интересно, что все 3 зависимости  2 урока
-        относятся к springframework
-        Возможно в дальнейшем их можно будет загружать группой
-        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.1.4.RELEASE</version>
+            <!--
+            Добавлено в уроке 2 для простейшего приложения
+            Базовая зависимость Spring
+            Интересно, что все 3 зависимости  2 урока
+            относятся к springframework
+            Возможно в дальнейшем их можно будет загружать группой
+            -->
         </dependency>
     </dependencies>
 </project>

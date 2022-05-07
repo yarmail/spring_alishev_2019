@@ -57,4 +57,8 @@ Scope Singleton, Prototype<br><br>
 <!--- Урок 8 -->
 <a href="/src/main/java/lesson08">
 Урок 8: Жизненный цикл бина (Bean Lifecycle). 
-Init, Destroy и Factory методы.</a><br>
+Init, Destroy и Factory методы.</a><br><br>
+
+<!--- Урок 9 -->
+<a href="/src/main/java/lesson09">
+Урок 9: Аннотации. Введение.</a><br>
