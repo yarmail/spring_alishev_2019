@@ -1,0 +1,30 @@
+Урок 11: Аннотация @Qualifier.
+Внедрение зависимостей (Dependency Injection).
+
+Если на внедрение у нас претендует больше одного
+бина мы можем использовать аннотацию @Qualifier
+(уточнитель) c id того бина, который нам нужен
+(с полем не очень рекомендовано)
+.
+@Component
+public class MusicPlayer {
+    @Autowired
+    @Qualifier ("classicalMusic")
+    private Music music;
+.
+
+---
+
+Аннотацию можно внедрять и на
+сеттерах и конструкторах
+вот таким образом (необычно, внутри параметров)
+.
+@Component
+public class MusicPlayer {
+    private Music music;
+
+    @Autowired
+    public MusicPlayer(@Qualifier ("classicalMusic") Music music) {
+        this.music = music;
+    }
+.
