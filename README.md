@@ -61,4 +61,8 @@ Init, Destroy и Factory методы.</a><br><br>
 
 <!--- Урок 9 -->
 <a href="/src/main/java/lesson09">
-Урок 9: Аннотации. Введение.</a><br>
+Урок 9: Аннотации. Введение.</a><br><br>
+
+<!--- Урок 10 -->
+<a href="/src/main/java/lesson10">
+Урок 10: Аннотация @Autowired. Внедрение зависимостей (Dependency Injection).</a><br><br>
