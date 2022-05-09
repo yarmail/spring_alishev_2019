@@ -70,3 +70,7 @@ Init, Destroy и Factory методы.</a><br><br>
 <!--- Урок 11 -->
 <a href="/src/main/java/lesson11">
 Урок 11: Аннотация @Qualifier. Внедрение зависимостей Часть 2.</a><br><br>
+
+<!--- Урок 12 -->
+<a href="/src/main/java/lesson12">
+Урок 12: Аннотации @Scope, @Value, @PostConstruct, @PreDestroy</a><br><br>

@@ -55,5 +55,16 @@
             Возможно в дальнейшем их можно будет загружать группой
             -->
         </dependency>
+
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+            <!--
+            С 12 урока. Оказалось, что для
+            аннотаций PostConstruct PreDestroy
+            после 9 JDK требуется данное апи
+            -->
+        </dependency>
     </dependencies>
 </project>

@@ -1,0 +1,55 @@
+Урок 12: Аннотации @Scope, @Value, @PostConstruct, @PreDestroy
+
+Внедрение значений из внешнего файла
+Как мы это делали с помощью XML конфигурации
+
+lesson06.properties
+MusicPlayer.name=Some name
+MusicPlayer.volume=70
+
+lesson06.xml
+<context:property-placeholder location="classpath:lesson06.properties"/>
+<property name = "name" value = "${musicPlayer.name}" />
+<property name = "volume" value = "${musicPlayer.volume}">
+
+тоже самое можно делать в спринге аннотацией @Value
+Сначала настраиваем конфиг.
+
+---
+
+Scope Singleton vs Prototype
+Для указания количества бинов мы може пользоваться
+аннотацией @Scope, например так:
+.
+@Component
+@Scope("singleton")
+public class ClassicalMusic implements Music
+.
+
+---
+
+Жизненный цикл бина
+init - метод запускается в ходе инициализации
+бина - @PostConstruct
+destroy - метод запускается входе уничтожения бина
+(урок 8) - @PreDestroy
+. (подключилось после подключения javax.annotation в pom)
+@Component
+public class ClassicalMusic implements Music {
+
+    @PostConstruct
+    public void doMyInit() {
+        System.out.println("делаю Init метод");
+    }
+.
+Модификатор доступа - любой
+Тип возвращаемого значения - любой
+Название - любое
+Аргументы - нельзя
+
+
+
+
+
+
+
