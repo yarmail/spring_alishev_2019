@@ -1,0 +1,118 @@
+Урок 13: Конфигурация с помощью Java кода.
+
+Конфигурация Spring приложений
+1. Вся конфигурация на xml
+2. XML + Аннотации
+3. Java код + Аннотации
+(XML конфигурации больше нет)
+
+Расмотрим 3 вариант.
+Для того, чтобы использовать Java класс для
+конфигурации Spring приложения
+используется аннотация @Configuration
+
+.
+@Configuration
+public class SpringConfig{}
+.
+
+Пустой конфигурационный класс равен по функционалу
+XML файлу
+
+---
+
+Для каждого XML тега есть соотвествующая аннотация например:
+Было в кофиге XML:
+<context:component-scan base-package="lesson12"/>
+
+Стало в конфиге Java:
+.
+@Configuration
+@ComponentScan("lesson12")
+public class SpringConfig{}
+.
+
+---
+
+Было Создание бина в конфиге
+<bean
+    id="musicBean"
+    class="lesson06.ClassicalMusic">
+</bean>
+
+Стало в Java
+@Configuration
+public class SpringConfig{
+    @Bean
+    public ClassicalMusic musicBean() {
+        return new ClassicalMusic();
+    }
+}
+
+и так для всех тегов из xml есть соответсвующие
+аннотации для java
+
+---
+
+Как использовать конфигурационный файл в main методе.
+(например TestSpring)
+
+Было подключение файла конфига xml
+    ClassPathXmlApplicationContext context =
+        new ClassPathXmlApplicationContext("lesson12.xml");
+
+Стало подключение файла конфига Java
+
+    AnnotationConfigApplicationContext context =
+        new AnnotationConfigApplicationContext(SpringConfig.class);
+
+---
+
+Ручное внедрение зависимостей (без @Autowired)
+c помощью Java конфигурации
+
+Было (с помощью конструктора):
+<bean id="musicBean" class="lesson05.ClassicalMusic">
+</bean>
+<bean id="musicPlayer" class="lesson05.MusicPlayer">
+    <constructor-arg ref="musicBean"/>
+</bean>
+
+-
+
+public class SpringConfig {
+    @Bean
+    public RockMusic rockMusic() {
+        return new RockMusic();
+    }
+    @Bean
+    public MusicPlayer musicPlayer() {
+        return new MusicPlayer(rockMusic());
+    }
+}
+
+
+---
+
+Аннотация @Bean
+Как и в случае с XML конфигурацией, по умолчанию у бинов
+scope = singleton
+Это значит, что по умолчанию бин вызывается 1 раз
+
+
+----
+
+Внедрение значений из внешнего файла
+
+Раньше:
+lesson12.properties
+MusicPlayer.name=Some name
+MusicPlayer.volume=70
+
+lesson12.xml
+<context:property-placeholder location="classpath:lesson12.properties"/>
+
+(Добавить сюда)
+
+Теперь:
+Вместо строки в xml добавляем анотацию @PropertySource

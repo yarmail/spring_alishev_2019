@@ -74,3 +74,7 @@ Init, Destroy и Factory методы.</a><br><br>
 <!--- Урок 12 -->
 <a href="/src/main/java/lesson12">
 Урок 12: Аннотации @Scope, @Value, @PostConstruct, @PreDestroy</a><br><br>
+
+<!--- Урок 13 -->
+<a href="/src/main/java/lesson13">
+Урок 13: Конфигурация с помощью Java кода.</a><br><br>
