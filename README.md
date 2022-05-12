@@ -78,3 +78,8 @@ Init, Destroy и Factory методы.</a><br><br>
 <!--- Урок 13 -->
 <a href="/src/main/java/lesson13">
 Урок 13: Конфигурация с помощью Java кода.</a><br><br>
+
+<!--- Урок 14 -->
+<a href="/src/main/java/lesson14">
+Урок 14: Spring MVC. Теория.</a><br>
+Spring MVC, DispatcherServlet
