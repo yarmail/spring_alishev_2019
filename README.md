@@ -1,8 +1,8 @@
-### Course Nail Alishev Spring 2019
+### Course Nail Alishev Spring 2019 (part 1)
 
 
 #### Description
-Коспект курса с примерами на Java. <br>
+Коспект первой части курса Spring Framework, Spring Core (уроки 1-13) с примерами на Java. <br>
 <a href="https://www.youtube.com/watch?v=5ePo08sqcpk&list=PLAma_mKffTOR5o0WNHnY0mTjKxnCgSXrZ">
 Ссылка на сам курс на YouTube</a><br>
 
@@ -78,8 +78,3 @@ Init, Destroy и Factory методы.</a><br><br>
 <!--- Урок 13 -->
 <a href="/src/main/java/lesson13">
 Урок 13: Конфигурация с помощью Java кода.</a><br><br>
-
-<!--- Урок 14 -->
-<a href="/src/main/java/lesson14">
-Урок 14: Spring MVC. Теория.</a><br>
-Spring MVC, DispatcherServlet
